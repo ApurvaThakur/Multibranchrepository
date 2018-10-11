@@ -1,8 +1,16 @@
-node{
-    stage 'compile'
-    sh 'javac javaprogram/HelloWorld.java'
-    stage 'run'
-    sh 'java -cp javaprogram HelloWorld'
-    stage 'output'
-    sh 'echo on second branch'
+pipeline{
+    agent any
+    stages{
+        stage('build'){
+            steps{
+                sh "javac javaprogram/HelloWorld.java"
+            }
+        }
+        stage('Run'){
+            steps{
+                sh "java -cp javaprogram HelloWorld.java"
+            }
+        }
+
+    }
 }
