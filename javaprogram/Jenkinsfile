@@ -1,8 +1,8 @@
 node{
     stage 'compile'
-    sh 'javac HelloWorld.java''
+    sh 'javac javaprogram/HelloWorld.java'
     stage 'run'
-    sh 'java HelloWorld'
+    sh 'java -cp javaprogram HelloWorld'
     stage 'output'
     sh 'echo on second branch'
 }
