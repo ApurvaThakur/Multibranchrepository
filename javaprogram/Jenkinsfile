@@ -8,7 +8,7 @@ pipeline{
         }
         stage('Run'){
             steps{
-                sh "java -cp javaprogram HelloWorld.java"
+                sh "java -cp javaprogram HelloWorld"
             }
         }
 
